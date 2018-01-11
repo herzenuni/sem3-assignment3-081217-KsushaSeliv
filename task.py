@@ -8,7 +8,7 @@ try:
         json_file = open('data.json', 'r')
         fl = json_file.read()
         data = json.loads(fl)
-except FileExistsError:
+except OSError:
     print("Файл не найден!")
 
 pprint.pprint(data)
